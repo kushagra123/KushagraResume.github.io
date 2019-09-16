@@ -224,11 +224,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Right Column -->
     <div class="twothird">
     <div class="bar indigo">
-        <button class="bar-item button" onclick="openCity('Workex')"><i class="fa fa-suitcase fa-fw large"></i>&nbsp;Work Experience</button>
-        <button class="bar-item button" onclick="openCity('Education')"><i class="fa fa-graduation-cap fa-fw large"></i>&nbsp;Education</button>
-        <button class="bar-item button" onclick="openCity('Project')"><i class="fa fa-code fa-fw large"></i>Projects</button>
+        <button class="bar-item button" onclick="openTab('Workex')"><i class="fa fa-suitcase fa-fw large"></i>&nbsp;Work Experience</button>
+        <button class="bar-item button" onclick="openTab('Education')"><i class="fa fa-graduation-cap fa-fw large"></i>&nbsp;Education</button>
+        <button class="bar-item button" onclick="openTab('Project')"><i class="fa fa-code fa-fw large"></i>Projects</button>
       </div>
-      <div id="Workex" class="container card white margin-bottom city" >
+      <div id="Workex" class="container card white margin-bottom tab" >
         <br>
         <div class="container">
           <h4 class="opacity"><b>Cerner Healthcare Pvt. Ltd. | Software Engineer, C# developer – Cerner Instant Access</b></h4>
@@ -260,7 +260,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p class="text-grey">Technologies: C# (Programming Language) | XAML | Microsoft Visual Studio | WPF Framework | MVC architecture | JIRA | Tortoise SVN | Git</p>
         </div>
       </div>
-      <div id="Education" class="container card white margin-bottom city" style="display:none">
+      <div id="Education" class="container card white margin-bottom tab" style="display:none">
         <br>
         <div class="container">
           <h4 class="opacity"><b>State University of New York at Buffalo</b></h4>
@@ -282,7 +282,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <hr>
         <p>*Expected</p>
       </div>
-      <div id="Project" class="container card white margin-bottom city" style="display:none">
+      <div id="Project" class="container card white margin-bottom tab" style="display:none">
         <br>
         <div class="container" style="overflow-y:scroll;max-height:947px;">
           <div class="container card white margin-bottom">
@@ -395,9 +395,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 <script>
-function openCity(cityName) {
+function openTab(cityName) {
   var i;
-  var x = document.getElementsByClassName("city");
+  var x = document.getElementsByClassName("tab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
