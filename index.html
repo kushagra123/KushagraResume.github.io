@@ -49,7 +49,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           </div>
           <p class="large"></p>
           <button class="collapsible"><b><i class="fa fa-microchip fa-fw margin-right text-indigo"></i>Operating System</b></button>
-          <div class="content-sw">
+          <div class="content-sw" id="con0">
             <ul class="ul hover-color">
               <li class="hover-red">Ubuntu Versions - 16.04, 18.04</li>
               <li class="hover-blue">Windows Versions - 95, XP, Vista, 2000 and above</li>
@@ -57,7 +57,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
           <p class="large text-theme"></p>
           <button class="collapsible"><b><i class="fa fa-code fa-fw margin-right text-indigo"></i>Programming Languages</b></button>
-          <div class="content-sw">
+          <div class="content-sw" id="con1">
             <table class="table hoverable">
               <tr class="indigo">
                 <th>Language</th>
@@ -162,7 +162,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
           <br>
           <button class="collapsible"><b><i class="fa fa-laptop fa-fw margin-right text-indigo"></i>Softwares & Technologies</b></button>
-          <div class="content-sw">
+          <div class="content-sw" id="con2">
             <table class="table">
               <tr>
                 <td>PyCharm</td>
@@ -208,7 +208,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
           <br>
           <button class="collapsible"><b><i class="fa fa-laptop fa-fw margin-right text-indigo"></i>Extra-Curricular Activities & Interests</b></button>
-            <div class="content-sw">
+            <div class="content-sw" id="con3">
               <ul class="ul hover-color">
                 <li class="hover-blue">Former member of technical team at ISTE, Manipal.</li>
                 <li class="hover-yellow">Former member of System Admin team at Manipal during multiple college fests.</li>
@@ -414,16 +414,19 @@ for (i = 0; i < coll.length; i++) {
      var coll = document.getElementsByClassName("collapsible");
      var i;
     for (i = 0; i < coll.length; i++){
-        var content = coll[i].nextElementSibling;
+       var content = coll[i].nextElementSibling;
+       var contentThis = this.nextElementSibling;                                                      
+    	  if(content.id==contentThis.id){
+            continue;
+          }
           if (content.style.maxHeight){
             content.style.maxHeight = null;
         }
       }                          
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (contentThis.style.maxHeight){
+      contentThis.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      contentThis.style.maxHeight = contentThis.scrollHeight + "px";
     }
   });
 }
