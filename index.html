@@ -408,10 +408,16 @@ function openCity(cityName) {
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
-
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++){
+          if (coll[i].nextElementSibling.style.maxHeight){
+            coll[i].nextElementSibling.style.maxHeight = null;
+        }
+      }                              
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
