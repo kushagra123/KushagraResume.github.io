@@ -425,6 +425,7 @@ for (i = 0; i < coll.length; i++) {
       contentThis.style.maxHeight = null;
     } else {
       contentThis.style.maxHeight = contentThis.scrollHeight + "px";
+      contentThis.scrollIntoView();                                                            
     }
   });
 }
