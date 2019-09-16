@@ -410,7 +410,6 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
     var contentThis = this.nextElementSibling;                              
     for (i = 0; i < coll.length; i++){
        var content = coll[i].nextElementSibling;                                                     
@@ -418,9 +417,11 @@ for (i = 0; i < coll.length; i++) {
             continue;
           }
           if (content.style.maxHeight){
+            coll[i].classList.toggle("active");
             content.style.maxHeight = null;
         }
-      }                          
+      }
+    this.classList.toggle("active");                      
     if (contentThis.style.maxHeight){
       contentThis.style.maxHeight = null;
     } else {
