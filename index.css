@@ -276,25 +276,28 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
-/*button {
-  border: none;
-  outline: 0;
+.tooltip {
+  position: relative;
   display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #3f51b5;
+  color: #fff;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
 }
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
-
-button:hover, a:hover {
-  opacity: 0.7;
-}*/

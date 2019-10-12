@@ -33,15 +33,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <img src="images/FrontPicture.JPG"" alt="John" style="width:90%">
             <p style="font-size:130%;"></i><b>Kushagra Chopra</b></p>
             <p class="title">Graduate Student | Computer Science | SUNY UB</p>
-              <a href="https://www.facebook.com/gunner070" target="_blank"><i class="fa fa-facebook-official xlarge hover-opacity"></i></a>&nbsp;
-              <a href="https://www.instagram.com/gunner070" target="_blank"><i class="fa fa-instagram xlarge hover-opacity"></i></a>&nbsp;
-              <a href="https://www.linkedin.com/in/kushagrachopra069" target="_blank"><i class="fa fa-linkedin xlarge hover-opacity"></i></a>&nbsp;
-              <a href="https://www.github.com/kushagra123" target="_blank"><i class="fa xlarge fa-github"></i></a>
+              <a href="https://www.facebook.com/gunner070" target="_blank" class="tooltip"><i class="fa fa-facebook-official xlarge hover-opacity"></i><span class="tooltiptext">Facebook</span></a>&nbsp;
+              <a href="https://www.instagram.com/gunner070" target="_blank" class="tooltip"><i class="fa fa-instagram xlarge hover-opacity"></i><span class="tooltiptext">Instagram</span></a>&nbsp;
+              <a href="https://www.linkedin.com/in/kushagrachopra069" target="_blank" class="tooltip"><i class="fa fa-linkedin xlarge hover-opacity"></i><span class="tooltiptext">LinkedIn</span></a>&nbsp;
+              <a href="https://www.github.com/kushagra123" target="_blank" class="tooltip"><i class="fa xlarge fa-github"></i><span class="tooltiptext">Github</span></a>
           </div>
         <br>
         <div class="container">
           <a href="mailto:kushagrachopra069@mail.com"><i class="fa fa-envelope fa-fw margin-right large text-indigo"></i>kushagrachopra069@mail.com</a>
           <p><i class="fa fa-mobile fa-fw margin-right large text-indigo"></i>+1(716)603-1324</p>
+          <a href="Resume.pdf" download="Resume.pdf"><i class="fa fa-download fa-fw margin-right large text-indigo"></i>Download Resume</a>
           <hr>
 
           <div class="text-indigo">
@@ -228,7 +229,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <button class="bar-item button" onclick="openTab('Education')"><i class="fa fa-graduation-cap fa-fw large"></i>&nbsp;Education</button>
         <button class="bar-item button" onclick="openTab('Project')"><i class="fa fa-code fa-fw large"></i>Projects</button>
       </div>
-      <div id="Workex" class="container card white margin-bottom tab" >
+      <div id="Workex" class="container card white margin-bottom tab">
         <br>
         <div class="container">
           <h4 class="opacity"><b>Cerner Healthcare Pvt. Ltd. | Software Engineer, C# developer – Cerner Instant Access</b></h4>
@@ -395,13 +396,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 <script>
-function openTab(cityName) {
+function openTab(pageName) {
   var i;
   var x = document.getElementsByClassName("tab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  document.getElementById(cityName).style.display = "block";  
+  document.getElementById(pageName).style.display = "block";  
 }
 </script>
 </body>
